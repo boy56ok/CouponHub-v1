@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  couponhub:
+    build: .
+    container_name: couponhub
+    ports:
+      - "80:80"
+    restart: always
