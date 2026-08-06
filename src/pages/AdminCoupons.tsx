@@ -7,7 +7,7 @@ import { fetchCoupons, createCoupon, updateCoupon, deleteCoupon } from '@/servic
 import { fetchStores, fetchCategories } from '@/services/couponService';
 import { useToast } from '@/contexts/ToastContext';
 import { formatDate, slugify } from '@/lib/utils';
-import type { Coupon } from '@/types';
+import type { Coupon, DiscountType } from '@/types';
 
 const emptyForm = {
   store_id: '',
@@ -15,7 +15,7 @@ const emptyForm = {
   title: '',
   description: '',
   code: '',
-  discount_type: 'fixed' as const,
+  discount_type: 'fixed' as DiscountType,
   discount_value: '',
   expires_at: '',
   is_featured: false,
@@ -163,7 +163,7 @@ export default function AdminCoupons() {
                 </div>
                 <div>
                   <label className="mb-1 block text-xs text-slate-300">ประเภทส่วนลด</label>
-                  <select value={form.discount_type} onChange={(e) => setForm({ ...form, discount_type: e.target.value as Coupon['discount_type'] })} className="w-full rounded-lg border border-white/10 bg-[#0a0c18] px-3 py-2 text-sm outline-none focus:border-[#f72585]">
+                  <select value={form.discount_type} onChange={(e) => setForm({ ...form, discount_type: e.target.value as DiscountType })} className="w-full rounded-lg border border-white/10 bg-[#0a0c18] px-3 py-2 text-sm outline-none focus:border-[#f72585]">
                     <option value="fixed">ลดราคา (บาท)</option>
                     <option value="percent">ลดราคา (%)</option>
                     <option value="free_shipping">ส่งฟรี</option>

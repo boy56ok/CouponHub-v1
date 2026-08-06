@@ -14,7 +14,7 @@ const colorMap: Record<string, { bg: string; text: string }> = {
 };
 
 export default function CategoryCard({ category, count }: { category: Category; count?: number }) {
-  const Icon = (Icons as Record<string, Icons.LucideIcon>)[category.icon] || Icons.Tag;
+  const Icon = (Icons as unknown as Record<string, React.ComponentType<{ size?: number; className?: string }>>)[category.icon] || Icons.Tag;
   const colors = colorMap[category.color] || colorMap.pink;
   return (
     <Link to={`/category/${category.slug}`} className="flex min-h-[66px] flex-col items-center justify-center gap-1 rounded-lg border border-[#252a3e] bg-[#101322] px-2 py-2 text-[10px] text-[#c9ccda] transition-all hover:border-[#ef3b93] hover:bg-gradient-to-b hover:from-[#261334] hover:to-[#111323] hover:text-white hover:shadow-[0_0_18px_#f2268020]">

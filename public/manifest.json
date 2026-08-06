@@ -1,0 +1,21 @@
+{
+  "name": "CouponHub — รวมทุกคูปอง ที่นี่ที่เดียว",
+  "short_name": "CouponHub",
+  "description": "ศูนย์รวมคูปองส่วนลดและโค้ดเกมอัปเดตทุกวัน",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050712",
+  "theme_color": "#050712",
+  "icons": [
+    {
+      "src": "/ea311ada-304a-4911-a2be-9b56b6d98fe9.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/ea311ada-304a-4911-a2be-9b56b6d98fe9.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
